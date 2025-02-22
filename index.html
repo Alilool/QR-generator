@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>QR Code generator</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="generator">
+      <h1>Qr code generator</h1>
+      <label for="data">Enter the text or url: </label>
+      <input type="text" placeholder="example.com" name="data" id="input" />
+      <label for="size">Enter the QR code size:</label>
+      <input type="number" placeholder="ex.150" name="size" id="size" />
+      <label for="color">Choose the color you want:</label>
+      <input type="color" id="color" class="color" name="color" />
+      <label for="bgcolor">Choose the Background color you want:</label>
+      <input type="color" id="bgcolor" class="color" name="bgcolor" />
+      <label for="format">Choose the QR code image format:</label>
+      <select name="format" id="format" default="png">
+        <option value="png">png</option>
+        <option value="jpg">jpg</option>
+        <option value="jpeg">jpeg</option>
+        <option value="svg">svg</option>
+        <option value="gif">gif</option>
+      </select>
+      <button id="generate">Generate</button>
+      <img src="" alt="qr code" id="qr" />
+    </div>
+    <div class="reader">
+      <h1>Qr code reader</h1>
+      <label for="file">Upload the qr code image:</label>
+      <input type="file" name="file" id="file" />
+      <button id="read">Read</button>
+      <p id="result"></p>
+    </div>
+  </body>
+  <script src="./main.js"></script>
+</html>
