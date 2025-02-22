@@ -45,7 +45,7 @@ qrDisplay.addEventListener("click", function () {
 
 readButton.addEventListener("click", () => {
   const regex =
-    /^(?:https?:\/\/)?(?:www\.)?[a-zA-Z0-9-]+\.(?:com|net|org|edu|gov|mil|io|dev|info|biz|co|xyz|me|tv|us|uk|ca|au|in|eu|fr|de|cn|jp|ru|br|sa)(?:\/\S*)?$/;
+    /^(?:https?:\/\/)?(?:www\.)?[a-zA-Z0-9-]+\.(?:[a-zA-Z0-9-]+\.)?(?:com|net|org|edu|gov|mil|io|dev|info|biz|co|xyz|me|tv|us|uk|ca|au|in|eu|fr|de|cn|jp|ru|br|sa||eg||fun)(?:\/\S*)?$/;
   if (validateFile(readInput)) {
     const formData = new FormData();
     formData.append("file", readInput.files[0]);
